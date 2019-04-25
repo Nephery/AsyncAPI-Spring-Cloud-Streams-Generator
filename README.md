@@ -20,11 +20,11 @@ The Application.yaml file purpose is to map the INPUTS/OUTPUTS to the underling 
 ## Generating an Application
 1. `java -jar target/AsyncAPI-SpringCloudStreams-Generator-0.0.1-SNAPSHOT.jar`
 
-   You may also override your default application properties using the `-D<name>=<value>` Java CLI parameters.
+   You may also override your default application properties at runtime by using the config properties as command-line properties.
    
    For example, you can force the generation of a source application with:
    ```bash
-   java -Dscs.scsType=SOURCE -jar target/AsyncAPI-SpringCloudStreams-Generator-0.0.1-SNAPSHOT.jar
+   java -jar target/AsyncAPI-SpringCloudStreams-Generator-0.0.1-SNAPSHOT.jar --scs.scsType=SOURCE
    ```
    
    Please refer to [SpringCloudStreamsGeneratorProperties.java](./src/main/java/com/solace/events/asyncapi/spring/cloud/streams/generator/SpringCloudStreamsGeneratorProperties.java) for the most up-to-date set of configuration properties.
